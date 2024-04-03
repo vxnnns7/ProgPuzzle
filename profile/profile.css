@@ -5,12 +5,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 body,
 input {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 .container {
@@ -64,7 +64,7 @@ form.sign-in-form {
 
 .title {
     font-size: 2.2rem;
-    color: #444;
+    color: #0D1B2A;
     margin-bottom: 10px;
 }
 
@@ -121,9 +121,9 @@ form.sign-in-form {
     justify-content: center;
     align-items: center;
     margin: 0 0.45rem;
-    color: #333;
+    color: #0D1B2A;
     border-radius: 50%;
-    border: 1px solid #333;
+    border: 1px solid #0D1B2A;
     text-decoration: none;
     font-size: 1.1rem;
     transition: 0.3s;
@@ -403,4 +403,11 @@ form.sign-in-form {
         bottom: 28%;
         left: 50%;
     }
+}
+
+button {
+    cursor: pointer;
+    outline: none;
+    background-color: transparent;
+    border: none;
 }
