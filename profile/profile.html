@@ -13,7 +13,7 @@
 	<div class="container">
 		<div class="forms-container">
 			<div class="signin-signup">
-				<form action="#" class="sign-in-form" id="sign-in-form" onsubmit="handleSubmit(event)">
+				<form action="#" method="post" class="sign-in-form" id="sign-in-form" onsubmit="handleSubmit(event)">
 					<h2 class="title">Sign in</h2>
 					<div class="input-field">
 						<i class="fas fa-user"></i>
@@ -22,7 +22,7 @@
 					<p id="errorusername" style="color: red; font-size: x-small;"></p>
 					<div class="input-field">
 						<i class="fas fa-lock"></i>
-						<input type="text" placeholder="Password" id="password" />
+						<input type="password" placeholder="Password" id="password" />
 					</div>
 					<p id="errorpasssword" style="color: red; font-size: x-small;"></p>
 					<button type="submit"><input type="submit" value="Login" class="btn solid" /></button>
@@ -42,7 +42,7 @@
 						</a>
 					</div>
 				</form>
-				<form action="#" class="sign-up-form" onsubmit="handleSubmit1(event)">
+				<form action="#" method="post" class="sign-up-form" id="sign-up-form" onsubmit="handleSubmit1(event)">
 					<h2 class="title">Sign up</h2>
 					<div class="input-field">
 						<i class="fas fa-user"></i>
