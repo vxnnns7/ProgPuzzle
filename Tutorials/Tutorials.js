@@ -88,7 +88,7 @@ const objofTutorials = [
 function displayTutorials() {
 	str = ''
 	objofTutorials.map((v) => {
-		str += `<div class="col-xl-2 col-xl-4 col-md-6 col-sm-12 mb-3">
+		str += `<div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-3">
 		<div class="card p-3" style="max-width: 540px;background-color: #415A77;">
 			<div class="row g-0">
 				<div class="col-md-4">

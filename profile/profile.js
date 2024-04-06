@@ -15,24 +15,46 @@ function handleSubmit(event) {
 		username: document.getElementById("username").value,
 		password: document.getElementById("password").value,
 	}
+	let usernameRegex = /^[a-z0-9]+$/
+	let passwordRegex = /^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[a-zA-Z!#$%&? "])[a-zA-Z0-9!#$%&?]{4,12}$/
 	if (!obj.username) {
 		isSuccess = false
 		document.getElementById("errorusername").innerText = "* Please enter username";
-	} else {
+	} else if (!usernameRegex.test(obj.username)) {
+		isSuccess = false
+		document.getElementById("errorusername").innerText = "* Please enter valid username";
+	}
+	else {
 		isSuccess = true
 		document.getElementById("errorusername").innerText = "";
 	}
 	if (!obj.password) {
 		isSuccess = false
 		document.getElementById("errorpasssword").innerText = "* Please enter password";
+	} else if (!passwordRegex.test(obj.password)) {
+		isSuccess = false
+		document.getElementById("errorpasssword").innerText = "* Please enter valid password";
 	}
 	else {
 		isSuccess = true
 		document.getElementById("errorpasssword").innerText = "";
 	}
 	if (isSuccess) {
-		// console.log(obj);
+		localStorage.setItem('details', JSON.stringify(obj))
 	}
+	let getDetails = JSON.parse(localStorage.getItem('details'))
+	let getNewUserData = JSON.parse(localStorage.getItem('newUserData'))
+	if (isSuccess) {
+		if (getDetails.username !== getNewUserData.username) {
+			document.getElementById('success').innerText = 'You are not connected with us :('
+		} else if (getDetails.password !== getNewUserData.password) {
+			document.getElementById('success').innerText = 'You are not connected with us :('
+		}
+		else {
+			document.getElementById('success').innerText = 'Sign in Successfull :)'
+		}
+	}
+
 }
 function handleSubmit1(event) {
 	event.preventDefault()
@@ -41,10 +63,16 @@ function handleSubmit1(event) {
 		email: document.getElementById("email").value,
 		password: document.getElementById("password1").value,
 	}
+	let usernameRegex = /^[a-z0-9]+$/
+	let passwordRegex = /^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[a-zA-Z!#$%&? "])[a-zA-Z0-9!#$%&?]{4,12}$/
 	if (!obj1.username) {
 		isSuccess = false
 		document.getElementById("errorusername1").innerText = "* Please enter username";
-	} else {
+	} else if (!usernameRegex.test(obj1.username)) {
+		isSuccess = false
+		document.getElementById("errorusername1").innerText = "* Please enter valid username";
+	}
+	else {
 		isSuccess = true
 		document.getElementById("errorusername1").innerText = "";
 	}
@@ -59,6 +87,9 @@ function handleSubmit1(event) {
 	if (!obj1.password) {
 		isSuccess = false
 		document.getElementById("errorpassword1").innerText = "* Please enter password";
+	} else if (!passwordRegex.test(obj1.password)) {
+		isSuccess = false
+		document.getElementById("errorpassword1").innerText = "* Atleast one uppercase & lowercase with atleast one digit and special character";
 	}
 	else {
 		isSuccess = true
@@ -66,5 +97,6 @@ function handleSubmit1(event) {
 	}
 	if (isSuccess) {
 		// console.log(obj1);
+		localStorage.setItem('newUserData', JSON.stringify(obj1))
 	}
 }
