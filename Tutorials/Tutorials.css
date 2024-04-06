@@ -104,3 +104,18 @@
 		overflow-y: auto;
 	}
 }
+
+div>h6>a {
+	text-decoration: none;
+	color: #E0E1DD;
+}
+
+div>h6>a:hover {
+	transition: ease 0.5s;
+	color: #ededed;
+}
+
+#icon>a {
+	color: #E0E1DD;
+	text-decoration: none;
+}
