@@ -37,7 +37,7 @@ function handleSubmit(event) {
 	} else if (!passwordRegex.test(obj.password)) {
 		isSuccess = false
 		document.getElementById("errorpassword").innerText = "* Please enter valid password";
-	} else if(!obj.password.length > 8){
+	} else if (!obj.password.length > 8) {
 		isSuccess = false
 		document.getElementById("errorpassword").innerText = "* Please enter less than 8 character";
 	} else {
@@ -92,10 +92,10 @@ function handleSubmit1(event) {
 	} else if (!passwordRegex1.test(obj1.password)) {
 		isSuccess = false
 		document.getElementById("errorpassword1").innerText = "* Please enter valid password";
-	} else if(!obj1.password.length > 8){
+	} else if (!obj1.password.length > 8) {
 		isSuccess = false
 		document.getElementById("errorpassword1").innerText = "* Please enter less than 8 character";
-	}else {
+	} else {
 		isSuccess = true
 		document.getElementById("errorpassword1").innerText = "";
 	}
