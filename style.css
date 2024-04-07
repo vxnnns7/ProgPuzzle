@@ -212,7 +212,32 @@ div>h6>a:hover {
 	color: #ededed;
 }
 
-#icon > a{
+#icon>a {
 	color: #E0E1DD;
 	text-decoration: none;
 }
+
+/* services section css */
+.servicesText.card {
+	height: 280px;
+	cursor: pointer;
+}
+
+.servicesIcon {
+	font-size: 36px;
+	text-align: center;
+	width: 100%;
+}
+
+.card-title {
+	text-align: center;
+}
+
+.card:hover .servicesIcon {
+	color: #008000;
+}
+
+.servicesText:hover {
+	border: 1px solid #008000;
+}
+
