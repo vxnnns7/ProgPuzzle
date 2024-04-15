@@ -376,28 +376,24 @@ function displayData() {
     </div>
     <div class="d-flex justify-content-around my-3">
     <div>
-        <input type="radio" name="${v.name}" id="">
+        <input type="radio" name="${v.name}" id="answers">
         <label for="" style="color: #E0E1DD;">${v.answers.a}</label>
     </div>
     <div>
-        <input type="radio" name="${v.name}" id="">
+        <input type="radio" name="${v.name}" id="answers">
         <label for="" style="color: #E0E1DD;">${v.answers.b}</label>
     </div>
     </div>
     <div class="d-flex justify-content-around my-3">
     <div>
-        <input type="radio" name="${v.name}" id="">
+        <input type="radio" name="${v.name}" id="answers">
         <label for="" style="color: #E0E1DD;">${v.answers.c}</label>
     </div>
     <div>
-        <input type="radio" name="${v.name}" id="">
+        <input type="radio" name="${v.name}" id="answers">
         <label for="" style="color: #E0E1DD;">${v.answers.d}</label>
-    </div></div></div>`
+    </div></div>
+    </div>`
     })
     document.getElementById('form').innerHTML = str
 }
-
-// function handleSubmit(event) {
-//     event.preventDefault()
-
-// }
