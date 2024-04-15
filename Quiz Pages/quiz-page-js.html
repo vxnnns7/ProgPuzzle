@@ -15,12 +15,24 @@
 </head>
 
 <body style="background-color: #0D1B2A;">
-    <div class="container">
-        <form style="display: flex; flex-direction: column; gap: 7px;" id="form" >
-        </form>
-        <button type="submit" class="d-block" onsubmit="checkAns(event)">Submit Answers</button>
-        <p id="finalanswer" style="color: #fff;"></p>
+    <section id="main">
+    </section>
+    <button type="submit" onclick="submitQuiz()" class="button d-block my-5 mx-auto">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75">
+            </path>
+        </svg>
+        <div class="text">
+            SUBMIT
+        </div>
+    </button>
+
+    <div id="popup">
+        <h2 id="finalanswer" class="text-center"></h2>
     </div>
+    <!-- <p id="finalanswer" style="color: #fff;"></p> -->
+
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="quiz-page-js.js"></script>

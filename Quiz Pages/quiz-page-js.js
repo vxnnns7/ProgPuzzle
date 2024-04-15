@@ -370,30 +370,58 @@ function displayData() {
     console.log(getjsquestions);
     str = ''
     getjsquestions.map((v) => {
-        str += `<div class="my-2"><div class="text-center">
-        <li style="color: #E0E1DD;list-style-type: none;display: inline;margin-right: px;">${v.questionId}. </li>
-        <p style="color: #E0E1DD;display: inline;"><u><b>${v.question}</b></u></p>
+        str += `<div class="container mt-5 p-3" id="quiz">
+    <div class="col">
+        <h3 id="questionBox">
+            ${v.questionId}) ${v.question}
+        </h3>
     </div>
-    <div class="d-flex justify-content-around my-3">
-    <div>
-        <input type="radio" name="${v.name}" id="answers">
-        <label for="" style="color: #E0E1DD;">${v.answers.a}</label>
+    <div class="col box">
+        <input name="${v.name}" type="radio" id="${v.name}_a" value="a" required>
+        <label for="${v.name}_a" class="mx-2">${v.answers.a}</label>
     </div>
-    <div>
-        <input type="radio" name="${v.name}" id="answers">
-        <label for="" style="color: #E0E1DD;">${v.answers.b}</label>
+    <div class="col box">
+    <input name="${v.name}" type="radio" id="${v.name}_b" value="b" required>
+    <label for="${v.name}_b" class="mx-2">${v.answers.b}</label>
     </div>
+    <div class="col box">
+    <input name="${v.name}" type="radio" id="${v.name}_c" value="c" required>
+    <label for="${v.name}_c" class="mx-2">${v.answers.c}</label>
     </div>
-    <div class="d-flex justify-content-around my-3">
-    <div>
-        <input type="radio" name="${v.name}" id="answers">
-        <label for="" style="color: #E0E1DD;">${v.answers.c}</label>
+    <div class="col box">
+    <input name="${v.name}" type="radio" id="${v.name}_d" value="d" required>
+    <label for="${v.name}_d" class="mx-2">${v.answers.d}</label>
     </div>
-    <div>
-        <input type="radio" name="${v.name}" id="answers">
-        <label for="" style="color: #E0E1DD;">${v.answers.d}</label>
-    </div></div>
     </div>`
     })
-    document.getElementById('form').innerHTML = str
+    document.getElementById('main').innerHTML = str
 }
+
+function submitQuiz() {
+    let userAnswers = {};
+
+    // Use map to create an array of user answers
+    const userAnswersArray = jsobj.map(question => {
+        const selectedAnswer = document.querySelector(`input[name="${question.name}"]:checked`);
+        return selectedAnswer ? selectedAnswer.value : null;
+    });
+
+    // Use reduce to calculate the score
+    const score = userAnswersArray.reduce((totalScore, userAnswer, index) => {
+        const correctAnswer = jsobj[index].correctanswer;
+        return userAnswer === correctAnswer ? totalScore + 1 : totalScore;
+    }, 0);
+
+    document.getElementById('popup').style.display = 'block'
+    // Display score
+    document.getElementById('finalanswer').textContent = `Your score is: ${score} / 30`;
+}
+
+// comment it while you developing it. 
+
+document.addEventListener("visibilitychange", function() {
+    if (document.visibilityState === "hidden") {
+      // Close the current tab
+      window.close();
+    }
+  });
