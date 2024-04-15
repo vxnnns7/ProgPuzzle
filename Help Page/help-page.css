@@ -1,0 +1,63 @@
+body {
+    margin-top: 50px;
+    background-color: #1B263B;
+}
+
+h1 {
+    color: #ffffff;
+    font-weight: 800 !important;
+    font-size: 50px;
+}
+
+h6 {
+    color: #ffffff
+}
+
+.img-wrapper {
+    width: 500px;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+input,
+textarea,
+select {
+    background: #f7f9f8 !important;
+}
+
+.email-us {
+    text-decoration: underline;
+}
+
+label {
+    font-weight: 600;
+    color: #ffffff
+}
+
+button {
+    float: right;
+}
+
+button span {
+    margin-left: 8px;
+}
+
+button i {
+    margin: 0px 8px;
+}
+
+button[type="button"] {
+    background-color: #ffffff;
+}
+
+
+
+.error {
+    color: red;
+    font-size: 13px;
+    margin: 1px;
+    padding: 1px;
+}

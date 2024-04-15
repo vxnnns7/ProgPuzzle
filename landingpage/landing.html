@@ -1,52 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-
+ 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./landing.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../landingpage/landing.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     <div class="main-container">
-        <div class="blur-circle1">
-
-        </div>
-        <div class="blur-circle2">
-
-        </div>
-        <!-- Start Landing Page -->
+        <div class="blur-circle1"></div>
+        <div class="blur-circle2"></div>
         <div class="landing-page">
             <header>
                 <div class="container">
-                    <a href="#" class="logo">Your <b>Website</b></a>
+                    <a href="#" class="logo">Prog <b>Puzzle</b></a>
                     <ul class="links">
-                        <li>Home</li>
-                        <li>About Us</li>
-                        <li>Work</li>
-                        <li>Info</li>
-                        <li>Get Started</li>
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">QUIZ PLAY</a></li>
+                        <li><a href="#">INSTRUCTIONS</a></li>
+                        <li><a href="#">LEADERBOARDS</a></li>
+                        <li><a href="../profile/profile.html" class="profile" target="_parent">PROFILE</a></li>
                     </ul>
                 </div>
             </header>
             <div class="content">
                 <div class="container">
-                    <div class="info">
-                        <h1>Looking For Inspiration</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus odit nihil ullam
-                            nesciunt quidem iste, Repellendus odit nihil</p>
-                        <button>Button name</button>
-                    </div>
-                    <div class="image">
-                        <img class="main-image"
-                            src="https://cdni.iconscout.com/illustration/premium/thumb/businessman-working-using-vr-tech-3840669-3202986.png?f=webp">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <div class="info">
+                                <h1>Intellect Quest</h1>
+                                <p>High-converting questions: Prompt visitors to think about their relationships with
+                                    the world and their inner selves.</p>
+                                <button class="btn btn-primary">GET STARTED</button>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="image">
+                                <img class="main-image img-fluid"
+                                    src="https://cdni.iconscout.com/illustration/premium/thumb/businessman-working-using-vr-tech-3840669-3202986.png?f=webp">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- End Landing Page -->
     </div>
+
+    <script src="./landing.js"></script>
+
 </body>
 
 </html>
