@@ -1,63 +1,147 @@
-body {
-    margin-top: 50px;
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    font-family: "Poppins", sans-serif;
+}
+
+.nav {
+    height: 50px;
+    width: 100%;
+    background-color: #0D1B2A;
+    position: relative;
+}
+
+.nav>.nav-header {
+    display: inline;
+}
+
+.nav>.nav-header>.nav-title {
+    display: inline-block;
+    font-size: 20px;
+    color: #E0E1DD;
+    padding: 10px 10px 10px 10px;
+    letter-spacing: 1px;
+}
+
+.nav>.nav-btn {
+    display: none;
+}
+
+.nav>.nav-links {
+    display: inline;
+    float: right;
+    font-size: 15px;
+}
+
+.nav>.nav-links>a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: #E0E1DD;
+}
+
+.nav>.nav-links>a:hover {
+    transition: ease 0.5s;
+    color: #415A77;
+}
+
+.nav>#nav-check {
+    display: none;
+}
+
+@media (max-width:600px) {
+    .nav>.nav-btn {
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+
+    .nav>.nav-btn>label {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 13px;
+    }
+
+    .nav>.nav-btn>label:hover,
+    .nav #nav-check:checked~.nav-btn>label {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .nav>.nav-btn>label>span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 2px solid #E0E1DD;
+    }
+
+    .nav>.nav-links {
+        z-index: 999;
+        position: absolute;
+        display: block;
+        width: 100%;
+        background-color: #0D1B2A;
+        height: 0px;
+        transition: all 0.3s ease-in;
+        overflow-y: hidden;
+        top: 50px;
+        left: 0px;
+    }
+
+    .nav>.nav-links>a {
+        display: block;
+        width: 100%;
+    }
+
+    .nav>#nav-check:not(:checked)~.nav-links {
+        height: 0px;
+    }
+
+    .nav>#nav-check:checked~.nav-links {
+        height: calc(100vh - 50px);
+        overflow-y: auto;
+    }
+}
+
+
+.reviews {
+    margin-top: 40px;
+}
+
+.review {
+    /* border: 1px solid #ccc; */
+    padding: 10px;
+    margin-bottom: 10px;
     background-color: #1B263B;
 }
 
-h1 {
-    color: #ffffff;
-    font-weight: 800 !important;
-    font-size: 50px;
+.review p {
+    margin: 5px 0;
+    color: white;
 }
 
-h6 {
-    color: #ffffff
-}
-
-.img-wrapper {
-    width: 500px;
-}
-
-img {
-    height: 100%;
-    width: 100%;
-}
-
-input,
-textarea,
-select {
-    background: #f7f9f8 !important;
-}
-
-.email-us {
-    text-decoration: underline;
-}
-
-label {
-    font-weight: 600;
-    color: #ffffff
+.accordion .card {
+    border: none;
 }
 
 button {
-    float: right;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    margin-top: 5px;
+    color: #ffffff;
 }
 
-button span {
-    margin-left: 8px;
+.faq-section {
+    padding: 50px 0;
 }
 
-button i {
-    margin: 0px 8px;
+.faq-question {
+    cursor: pointer;
 }
 
-button[type="button"] {
-    background-color: #ffffff;
-}
-
-
-
-.error {
-    color: red;
-    font-size: 13px;
-    margin: 1px;
-    padding: 1px;
+.faq-answer {
+    display: none;
 }
