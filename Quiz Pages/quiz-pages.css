@@ -1,0 +1,91 @@
+/* * {
+	box-sizing: border-box;
+	margin: 0%;
+	padding: 0%;
+	font-family: "Poppins", sans-serif;
+}
+.container{
+	height: 50%;
+	width: 50%;
+	background-color: #1B263B;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+} */
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+
+.main {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(24, 128, 207);
+}
+
+.container {
+	width: 35rem;
+	box-shadow: 0px 0px 5px grey;
+	display: flex;
+	background-color: #E0E1DD;
+	border-radius: 10px;
+	overflow: hidden;
+	flex-direction: column;
+	color: #0D1B2A;;
+}
+
+.col {
+	text-align: justify;
+	padding: 15px;
+	width: 95%;
+}
+
+.button {
+	background-color: #ffffff00;
+	color: #E0E1DD;
+	width: 8.5em;
+	height: 2.9em;
+	border: #1B263B 0.2em solid;
+	border-radius: 11px;
+	text-align: right;
+	transition: all 0.6s ease;
+}
+
+.button:hover {
+	background-color: #1B263B;
+	cursor: pointer;
+}
+
+.button svg {
+	width: 1.6em;
+	margin: -0.2em 0.8em 1em;
+	position: absolute;
+	display: flex;
+	transition: all 0.6s ease;
+}
+
+.button:hover svg {
+	transform: translateX(5px);
+}
+
+.text {
+	margin: 0 1.5em
+}
+
+#popup {
+	margin: auto;
+	margin-bottom: 50px;
+	padding: 7px;
+	width: 350px;
+	background-color: #1B263B;
+	display: none;
+	color: #E0E1DD;
+}

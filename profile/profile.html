@@ -6,10 +6,33 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="profile.css" />
-	<title>Sign in & Sign up Form</title>
+	<title>Profile</title>
+	<link rel="shortcut icon" href="../logo-vansss.png" type="image/x-icon">
 </head>
 
 <body>
+	<div class="nav d-flex justify-content-between">
+		<input type="checkbox" id="nav-check">
+		<div class="nav-header">
+			<div class="nav-title">
+				<b>ProgPuzzle</b>
+			</div>
+		</div>
+		<div class="nav-btn">
+			<label for="nav-check">
+				<span></span>
+				<span></span>
+				<span></span>
+			</label>
+		</div>
+
+		<div class="nav-links">
+			<a href="../index.html">Home</a>
+			<a href="../Instruction page/instruction.html">Instructions</a>
+			<a href="../Tutorials/Tutorials.html">Tutorials</a>
+			<a href="profile.html">Profile</a>
+		</div>
+	</div>
 	<div class="container">
 		<div class="forms-container">
 			<div class="signin-signup">
@@ -26,6 +49,7 @@
 					</div>
 					<p id="errorpasssword" style="color: red; font-size: x-small;"></p>
 					<button type="submit"><input type="submit" value="Login" class="btn solid" /></button>
+					<p id="success" style="color: yellowgreen;"></p>
 					<p class="social-text">Or Sign in with social platforms</p>
 					<div class="social-media">
 						<a href="#" class="social-icon">

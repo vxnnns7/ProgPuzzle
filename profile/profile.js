@@ -15,6 +15,7 @@ function handleSubmit(event) {
 		username: document.getElementById("username").value,
 		password: document.getElementById("password").value,
 	}
+<<<<<<< HEAD
 
 	let userNameRegex = /^[a-z0-9]+$/
 	let passwordRegex = /^[a-zA-Z0-9!@#$%^&*]{6,8}$/
@@ -27,6 +28,18 @@ function handleSubmit(event) {
 		isSuccess = false
 		document.getElementById('errorusername').innerText = "* Please enter only lowercase character";
 	} else {
+=======
+	let usernameRegex = /^[a-z0-9]+$/
+	let passwordRegex = /^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[a-zA-Z!#$%&? "])[a-zA-Z0-9!#$%&?]{4,12}$/
+	if (!obj.username) {
+		isSuccess = false
+		document.getElementById("errorusername").innerText = "* Please enter username";
+	} else if (!usernameRegex.test(obj.username)) {
+		isSuccess = false
+		document.getElementById("errorusername").innerText = "* Please enter valid username";
+	}
+	else {
+>>>>>>> b25adc3502487966562a9fe535a2075ac7be490d
 		isSuccess = true
 		document.getElementById("errorusername").innerText = "";
 	}
@@ -36,20 +49,43 @@ function handleSubmit(event) {
 		document.getElementById("errorpasssword").innerText = "* Please enter password";
 	} else if (!passwordRegex.test(obj.password)) {
 		isSuccess = false
+<<<<<<< HEAD
 		document.getElementById("errorpassword").innerText = "* Please enter valid password";
 	} else if (!obj.password.length > 8) {
 		isSuccess = false
 		document.getElementById("errorpassword").innerText = "* Please enter less than 8 character";
 	} else {
+=======
+		document.getElementById("errorpasssword").innerText = "* Please enter valid password";
+	}
+	else {
+>>>>>>> b25adc3502487966562a9fe535a2075ac7be490d
 		isSuccess = true
 		document.getElementById("errorpasssword").innerText = "";
 	}
 
 	if (isSuccess) {
+<<<<<<< HEAD
 		console.log(obj);
 		document.getElementById('sign-in-form').reset();
 
+=======
+		localStorage.setItem('details', JSON.stringify(obj))
+>>>>>>> b25adc3502487966562a9fe535a2075ac7be490d
 	}
+	let getDetails = JSON.parse(localStorage.getItem('details'))
+	let getNewUserData = JSON.parse(localStorage.getItem('newUserData'))
+	if (isSuccess) {
+		if (getDetails.username !== getNewUserData.username) {
+			document.getElementById('success').innerText = 'You are not connected with us :('
+		} else if (getDetails.password !== getNewUserData.password) {
+			document.getElementById('success').innerText = 'You are not connected with us :('
+		}
+		else {
+			document.getElementById('success').innerText = 'Sign in Successfull :)'
+		}
+	}
+
 }
 function handleSubmit1(event) {
 	event.preventDefault()
@@ -58,6 +94,7 @@ function handleSubmit1(event) {
 		email: document.getElementById("email").value,
 		password: document.getElementById("password1").value,
 	}
+<<<<<<< HEAD
 	let userNameRegex1 = /^[a-z0-9]+$/
 	let passwordRegex1 = /^[a-zA-Z0-9!@#$%^&*]{6,8}$/
 	let emailRegex = /^[a-zA-Z0-9.]+@[a-zA-Z]+[.][a-zA-Z]{2,3}$/
@@ -69,6 +106,16 @@ function handleSubmit1(event) {
 	else if (!userNameRegex1.test(obj1.username)) {
 		isSuccess = false
 		document.getElementById('errorusername1').innerText = "* Please enter only character(Lowercase) and digit";
+=======
+	let usernameRegex = /^[a-z0-9]+$/
+	let passwordRegex = /^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[a-zA-Z!#$%&? "])[a-zA-Z0-9!#$%&?]{4,12}$/
+	if (!obj1.username) {
+		isSuccess = false
+		document.getElementById("errorusername1").innerText = "* Please enter username";
+	} else if (!usernameRegex.test(obj1.username)) {
+		isSuccess = false
+		document.getElementById("errorusername1").innerText = "* Please enter valid username";
+>>>>>>> b25adc3502487966562a9fe535a2075ac7be490d
 	}
 	else {
 		isSuccess = true
@@ -89,6 +136,7 @@ function handleSubmit1(event) {
 	if (!obj1.password) {
 		isSuccess = false
 		document.getElementById("errorpassword1").innerText = "* Please enter password";
+<<<<<<< HEAD
 	} else if (!passwordRegex1.test(obj1.password)) {
 		isSuccess = false
 		document.getElementById("errorpassword1").innerText = "* Please enter valid password";
@@ -96,12 +144,24 @@ function handleSubmit1(event) {
 		isSuccess = false
 		document.getElementById("errorpassword1").innerText = "* Please enter less than 8 character";
 	} else {
+=======
+	} else if (!passwordRegex.test(obj1.password)) {
+		isSuccess = false
+		document.getElementById("errorpassword1").innerText = "* Atleast one uppercase & lowercase with atleast one digit and special character";
+	}
+	else {
+>>>>>>> b25adc3502487966562a9fe535a2075ac7be490d
 		isSuccess = true
 		document.getElementById("errorpassword1").innerText = "";
 	}
 
 	if (isSuccess) {
+<<<<<<< HEAD
 		console.log(obj1);
 		document.getElementById('sign-up-form').reset();
+=======
+		// console.log(obj1);
+		localStorage.setItem('newUserData', JSON.stringify(obj1))
+>>>>>>> b25adc3502487966562a9fe535a2075ac7be490d
 	}
 }
