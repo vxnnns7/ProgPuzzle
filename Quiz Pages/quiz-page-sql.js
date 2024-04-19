@@ -421,7 +421,8 @@ function submitQuiz() {
 // comment it while you developing it. 
 
 document.addEventListener("visibilitychange", function () {
-    if (document.visibilityState === "hidden") {
+    if (!document.visibilityState === "hidden") {
+        
         // Close the current tab
         window.close();
     }

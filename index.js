@@ -170,3 +170,4 @@ function redirectToTAILWINDSCSPage() {
 function redirectToMYSQLPage() {
     document.getElementById("redirectButton").setAttribute("onclick", "window.location.href = './Quiz Pages/quiz-page-sql.html'");
 }
+
